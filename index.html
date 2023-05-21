@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Matala 2</title>
+</head>
+<body>
+    <center>
+
+    <div class="beforestart" id="inputstage">
+        <p class="title" id="massages">Memory Game</p>
+        <input type="text" id="name" placeholder="Player Name"></input>
+        <input class="numcards" type="number" id="numcard" min="2" max="30" placeholder="num"></input>
+        <br><br>
+        <button type="button" onclick="verify()">Start Game</button>
+    </div>
+
+    <div class="afterstart1" id="gamestage">
+        <span class="player">Player:</span>
+        <span class="player2" id="player"></span>
+        <span class="time" id="time"></span>
+        <button type="button" onclick="closegame()">End game</button>
+        <br><br>
+            <center>
+            <div class="afterstart2" id="card-con">
+                
+            </div>
+            </center>
+    </div>
+
+    <div class="afterfinish" id="afterstage">
+        <p class="title" id="endmsg">Game finished</p>
+        Started with <span id="endcards"></span> cards<br><br>
+        Player:
+        <span id="endpname"></span>
+        Time:
+        <span id="endtime"></span><br><br>
+        Score:
+        <span id="endscore"></span><br><br>
+        <button type="button" onclick="verify()">Start Again</button>
+        <button type="button" onclick="newgame()">New game</button>
+    </div>
+
+    </center>
+
+
+    <script src="js.js"></script>
+</body>
+</html>
+
