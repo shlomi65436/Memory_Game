@@ -121,6 +121,8 @@ function closegame(){
     }
     gamestage.style.opacity = "0";
     gamestage.style.display = "none";
+    document.getElementById("endmsg").innerHTML = "Game finished";
+    document.getElementById("endmsg").style.color = "beige";
     document.getElementById("afterstage").style.display = "block";
     document.getElementById("endpname").innerHTML = playername;
     document.getElementById("endpname").style.color = "red";
@@ -130,6 +132,10 @@ function closegame(){
     document.getElementById("endtime").style.color = "red";
     document.getElementById("endcards").innerHTML = currcards;
     document.getElementById("endcards").style.color = "red";
+    if(score == currcards){
+        document.getElementById("endmsg").innerHTML = "Congratulation you made it !";
+        document.getElementById("endmsg").style.color = "lightgreen";
+    }
     flag = 0;
     x = 0;
     score = 0;
