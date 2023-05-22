@@ -34,6 +34,8 @@ function start(){
         massage.innerHTML = "Game failed to start";
         massage.style.color = "red";
     }
+    var audiostart = new Audio("start.mp3");
+    audiostart.play();
     document.getElementById("afterstage").style.display = "none";
     inputstage = document.getElementById("inputstage");
     gamestage = document.getElementById("gamestage");
@@ -70,13 +72,16 @@ function start(){
 var s = "0";
 var c = "0";
 function check(element){
+    var audiochoose = new Audio("ChooseCard.mp3");
     if(s === "0"){
+        audiochoose.play();
     element.style.backgroundImage = "url('images/"+element.id+".jpg')";
     s = element;
     s.removeAttribute("onclick");
     return;
     }
     if(c === "0"){
+        audiochoose.play();
         element.style.backgroundImage = "url('images/"+element.id+".jpg')";
     c = element;
     c.removeAttribute("onclick");
@@ -115,6 +120,8 @@ function startTime() {
 }
 
 function closegame(){
+    var audioend = new Audio("end.mp3");
+    audioend.play();
     var list = document.getElementById('card-con');
     while (list.firstChild) {
     list.removeChild(list.firstChild);
