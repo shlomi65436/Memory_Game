@@ -12,18 +12,24 @@
 
     <div class="beforestart" id="inputstage">
         <p class="title" id="massages">Memory Game</p>
-        <input type="text" id="name" placeholder="Player Name"></input>
-        <input class="numcards" type="number" id="numcard" min="2" max="30" placeholder="num"></input>
+        <input class="normal" type="text" id="name" placeholder="Player Name"></input>
+        <input class="normal" type="text" id="name2" placeholder="Player Blue"></input>
+        <input class="normal" class="numcards" type="number" id="numcard" min="2" max="30" placeholder="num"></input>
         <br><br>
+        <span class="radio"><input type="radio" onclick="checkboxfir()" name="countplayers" id="first" value="First"> One Player</input></span>
+        <span class="radio"><input type="radio" onclick="checkboxsec()" name="countplayers" id="second" value="Second"> Two Player</span><br><br>
         <button type="button" onclick="verify()">Start Game</button>
     </div>
 
     <div class="afterstart1" id="gamestage">
         <span class="player">Player:</span>
-        <span class="player2" id="player"></span>
+        <span class="playern1" id="player"></span>
+        <span class="player2" id="pblue">Player: <span class="playern2" id="player2"></span></span>
         <span class="time" id="time"></span>
         <button type="button" onclick="closegame()">End game</button>
         <br><br>
+        <span id="turnmsg"></span>
+        <br>
             <center>
             <div class="afterstart2" id="card-con">
                 
@@ -34,11 +40,11 @@
     <div class="afterfinish" id="afterstage">
         <p class="title" id="endmsg"></p>
         Started with <span id="endcards"></span> cards<br><br>
-        Player:
+        <span id="endp"></span>
         <span id="endpname"></span>
-        Time:
+        <span id = "timemsgend">Time:</span>
         <span id="endtime"></span><br><br>
-        Score:
+        <span id="score"></span>
         <span id="endscore"></span><br><br>
         <button type="button" onclick="verify()">Start Again</button>
         <button type="button" onclick="newgame()">New game</button>
